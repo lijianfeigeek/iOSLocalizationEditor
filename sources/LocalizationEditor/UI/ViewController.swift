@@ -6,24 +6,24 @@
 //  Copyright © 2018 Igor Kulman. All rights reserved.
 //
 
+// MARK: - 视图控制器协议 (ViewController 协议)
 import Cocoa
-
 /**
-Protocol for announcing changes to the toolbar. Needed because the VC does not have direct access to the toolbar (handled by WindowController)
- */
+// 此协议用于通知工具栏的更改。因为视图控制器本身没有直接访问工具栏（由 WindowController 处理）
+*/
 protocol ViewControllerDelegate: AnyObject {
     /**
-     Invoked when localization groups should be set in the toolbar's dropdown list
+     // 当本地化组应设置在工具栏的下拉列表中时调用
      */
     func shouldSetLocalizationGroups(groups: [LocalizationGroup])
 
     /**
-     Invoiked when search and filter should be reset in the toolbar
+     // 当在工具栏中重置搜索和筛选器时调用
      */
     func shouldResetSearchTermAndFilter()
 
     /**
-     Invoked when localization group should be selected in the toolbar's dropdown list
+     // 当在工具栏的下拉列表中选择本地化组时调用
      */
     func shouldSelectLocalizationGroup(title: String)
 }
