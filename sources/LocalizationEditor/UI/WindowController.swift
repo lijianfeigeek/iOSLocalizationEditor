@@ -66,12 +66,21 @@ protocol WindowControllerToolbarDelegate: AnyObject {
 // MARK: - 类定义
 final class WindowController: NSWindowController {
 
-    // MARK: - Outlets
+    // MARK: - IBOutlet 属性
 
+    // 打开按钮
     @IBOutlet private weak var openButton: NSToolbarItem!
+
+    // 搜索文本框
     @IBOutlet private weak var searchField: NSSearchField!
+
+    // 选择按钮
     @IBOutlet private weak var selectButton: NSPopUpButton!
+
+    // 筛选按钮
     @IBOutlet private weak var filterButton: NSPopUpButton!
+
+    // 新建按钮
     @IBOutlet private weak var newButton: NSToolbarItem!
 
     // MARK: - Properties
